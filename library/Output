@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [24/Oct/2013:14:05:04 +0000] "POST /library/v1/books/ HTTP/1.1" 201 182 240 240
+0:0:0:0:0:0:0:1 - - [24/Oct/2013:14:05:08 +0000] "GET /library/v1/books/1 HTTP/1.1" 200 182 12 12
+lost
+in put book is lost
+status is lost
+In temp.toString()==lost
+Sending messages to /queue/mytesting...
+Waiting for messages from /queue/mytesting...
+Received message = producer produced data in producer
+lost
+in put book is lost
+status is lost
+In temp.toString()==lost
+Sending messages to /queue/mytesting...
+Received message = producer produced data in producer
+Waiting for messages from /queue/mytesting...
