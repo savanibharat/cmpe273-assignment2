@@ -1,8 +1,7 @@
 package edu.sjsu.cmpe.procurement.api.resources;
+import javax.ws.rs.client.WebTarget;
 
-import javax.ws.rs.client.ClientBuilder;
-
-import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.*;
 
 public class ProcurementServiceResource {
 
@@ -11,5 +10,4 @@ public class ProcurementServiceResource {
 	{
 		this.client=client;
 	}
-	ClientBuilder
 }

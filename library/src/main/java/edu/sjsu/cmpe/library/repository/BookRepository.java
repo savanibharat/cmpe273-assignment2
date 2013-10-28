@@ -186,7 +186,7 @@ public class BookRepository implements BookRepositoryInterface {
 		Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 		Destination dest = new StompJmsDestination(config.getStompQueueName());//destination);
 		MessageProducer producer = session.createProducer(dest);
-		producer.setDeliveryMode(DeliveryMode.PERSISTENT);
+		//producer.setDeliveryMode(DeliveryMode.PERSISTENT);
 		//producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
 
 		System.out.println("Sending messages to " + config.getStompQueueName() + "...");

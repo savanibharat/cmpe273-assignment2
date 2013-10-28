@@ -1,5 +1,6 @@
 package edu.sjsu.cmpe.procurement;
 import edu.sjsu.cmpe.procurement.api.resources.RootResource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +31,12 @@ public class ProcurementService extends Service<ProcurementServiceConfiguration>
 	    Environment environment) throws Exception {
 	String queueName = configuration.getStompQueueName();
 	String topicName = configuration.getStompTopicName();
-	log.debug("Queue name is {}. Topic is {}", queueName, topicName);
+	String apollouser=configuration.getApolloUser();
+	String apolloPassword=configuration.getApolloPassword();
+	String apollohost=configuration.getApolloHost();
+	String apolloPort=configuration.getApolloPort();
+	
+	log.debug("Queue name is {}. Topic name is {}. User is {}, password is {}. host is {}. port is {}", queueName,topicName,apollouser,apolloPassword,apollohost,apolloPort);
 	// TODO: Apollo STOMP Broker URL and login
 	final Client client=new JerseyClientBuilder().using(configuration.getJerseyClientConfiguration())
 													.using(environment).build();
