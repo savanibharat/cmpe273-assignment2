@@ -1,5 +1,5 @@
 package edu.sjsu.cmpe.procurement;
-
+import edu.sjsu.cmpe.procurement.api.resources.RootResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,6 +9,7 @@ import com.yammer.dropwizard.client.JerseyClientBuilder;
 import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;
 
+import edu.sjsu.cmpe.procurement.api.resources.ProcurementServiceResource;
 import edu.sjsu.cmpe.procurement.config.ProcurementServiceConfiguration;
 
 public class ProcurementService extends Service<ProcurementServiceConfiguration> {
@@ -33,7 +34,8 @@ public class ProcurementService extends Service<ProcurementServiceConfiguration>
 	// TODO: Apollo STOMP Broker URL and login
 	final Client client=new JerseyClientBuilder().using(configuration.getJerseyClientConfiguration())
 													.using(environment).build();
-	//environment.addResource(new External);
+	environment.addResource(RootResource.class);
+	environment.addResource(new ProcurementServiceResource(client));
 
     }
 }
