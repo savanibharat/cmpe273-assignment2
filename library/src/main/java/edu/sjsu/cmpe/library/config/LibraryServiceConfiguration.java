@@ -19,9 +19,8 @@ public class LibraryServiceConfiguration extends Configuration {
     @JsonProperty
     private String apolloHost;
     
-    @NotEmpty
     @JsonProperty
-    private String apolloPort;
+    private int apolloPort;
     
     @NotEmpty
     @JsonProperty
@@ -72,14 +71,14 @@ public class LibraryServiceConfiguration extends Configuration {
 	/**
 	 * @return the apolloPort
 	 */
-	public String getApolloPort() {
+	public int getApolloPort() {
 		return apolloPort;
 	}
 
 	/**
 	 * @param apolloPort the apolloPort to set
 	 */
-	public void setApolloPort(String apolloPort) {
+	public void setApolloPort(int apolloPort) {
 		this.apolloPort = apolloPort;
 	}
     

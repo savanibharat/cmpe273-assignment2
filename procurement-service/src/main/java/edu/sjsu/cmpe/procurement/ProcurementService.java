@@ -1,4 +1,5 @@
 package edu.sjsu.cmpe.procurement;
+import de.spinscale.dropwizard.jobs.JobsBundle;
 import edu.sjsu.cmpe.procurement.api.resources.RootResource;
 
 import org.slf4j.Logger;
@@ -24,6 +25,8 @@ public class ProcurementService extends Service<ProcurementServiceConfiguration>
     @Override
     public void initialize(Bootstrap<ProcurementServiceConfiguration> bootstrap) {
 	bootstrap.setName("procurement-service");
+	  bootstrap.addBundle(new JobsBundle("edu.sjsu.cmpe.procurement"));
+
     }
 
     @Override
@@ -38,10 +41,10 @@ public class ProcurementService extends Service<ProcurementServiceConfiguration>
 	
 	log.debug("Queue name is {}. Topic name is {}. User is {}, password is {}. host is {}. port is {}", queueName,topicName,apollouser,apolloPassword,apollohost,apolloPort);
 	// TODO: Apollo STOMP Broker URL and login
-	final Client client=new JerseyClientBuilder().using(configuration.getJerseyClientConfiguration())
-													.using(environment).build();
+//	final Client client=new JerseyClientBuilder().using(configuration.getJerseyClientConfiguration())
+//													.using(environment).build();
 	environment.addResource(RootResource.class);
-	environment.addResource(new ProcurementServiceResource(client));
+	environment.addResource(new ProcurementServiceResource());
 
     }
 }

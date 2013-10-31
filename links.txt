@@ -1,0 +1,47 @@
+http://localhost:8001/library/v1/books/
+
+application/json
+
+{
+"isbn":12,
+"title":"bharat",
+"category":"fictional",
+"coverimage":"http://goo.gl/N96GJN",
+"status":"lost"
+}
+
+bookrepo library listener and producer
+procurement publisher and consumer
+
+http://54.215.210.214:9000/orders/68935
+
+
+DOUBTS::
+
+Goto bookrepo show if it is fine
+goto consumer of stomp client and show if it is fine
+Condition of wait in consumer.java
+ask jobs description
+dropwizard-jobs on ec2???
+
+yml file put library a and library b
+
+
+publish thru web sockets
+
+
+
+
+
+
+
+
+
+
+
+
+275 :: Gash mon     6to 8:45
+203 :: KP   mon wed 4:30 to 5:45
+239 :: tuesday      6:00 to 8:45
+239 :: tue thu      1:30 to 2:45
+

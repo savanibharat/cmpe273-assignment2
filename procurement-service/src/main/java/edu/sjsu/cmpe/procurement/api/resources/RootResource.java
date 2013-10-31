@@ -2,6 +2,7 @@ package edu.sjsu.cmpe.procurement.api.resources;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -26,8 +27,18 @@ public class RootResource {
     public Response getRoot() {
 	//LinksDto links = new LinksDto();
 	//links.addLink(new LinkDto("create-book", "/books", "POST"));
-
+ProcurementServiceResource res =new ProcurementServiceResource();
+//res.doPost();
+res.doGet();
 	return Response.ok().build();
+    }
+    @POST
+    @Timed(name="do-post")
+    public Response getrootdopost()
+    {
+    	ProcurementServiceResource res =new ProcurementServiceResource();
+    	res.doPost();
+    	return Response.ok().build();
     }
 }
 

@@ -3,12 +3,13 @@ package edu.sjsu.cmpe.library.repository;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 import javax.jms.Connection;
-import javax.jms.DeliveryMode;
 import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.Message;
@@ -35,26 +36,36 @@ public class BookRepository implements BookRepositoryInterface {
 
 	public BookRepository(LibraryServiceConfiguration configuration) {
 		isbnKey = 0;
-		bookInMemoryMap=new ConcurrentHashMap<Long, Book>();
+		bookInMemoryMap=seedData();
 		config=configuration;
 	}
 
-	/*
-	 * private ConcurrentHashMap<Long, Book> seedData(){ ConcurrentHashMap<Long,
-	 * Book> bookMap = new ConcurrentHashMap<Long, Book>(); Book book = new
-	 * Book(); book.setIsbn(1); book.setCategory("computer");
-	 * book.setTitle("Java Concurrency in Practice"); try {
-	 * book.setCoverimage(new URL("http://goo.gl/N96GJN")); } catch
-	 * (MalformedURLException e) { // eat the exception }
-	 * bookMap.put(book.getIsbn(), book);
-	 * 
-	 * book = new Book(); book.setIsbn(2); book.setCategory("computer");
-	 * book.setTitle("Restful Web Services"); try { book.setCoverimage(new
-	 * URL("http://goo.gl/ZGmzoJ")); } catch (MalformedURLException e) { // eat
-	 * the exception } bookMap.put(book.getIsbn(), book);
-	 * 
-	 * return bookMap; }
-	 */
+	private ConcurrentHashMap<Long, Book> seedData(){
+        ConcurrentHashMap<Long, Book> bookMap = new ConcurrentHashMap<Long, Book>();
+        Book book = new Book();
+        book.setIsbn(1);
+        book.setCategory("computer");
+        book.setTitle("Java Concurrency in Practice");
+        try {
+            book.setCoverimage(new URL("http://goo.gl/N96GJN"));
+        } catch (MalformedURLException e) {
+            // eat the exception
+        }
+        bookMap.put(book.getIsbn(), book);
+
+        book = new Book();
+        book.setIsbn(2);
+        book.setCategory("computer");
+        book.setTitle("Restful Web Services");
+        try {
+            book.setCoverimage(new URL("http://goo.gl/ZGmzoJ"));
+        } catch (MalformedURLException e) {
+            // eat the exception
+        }
+        bookMap.put(book.getIsbn(), book);
+
+        return bookMap;
+    }
 
 	/**
 	 * This should be called if and only if you are adding new books to the
@@ -117,19 +128,116 @@ public class BookRepository implements BookRepositoryInterface {
 		book.setStatus(newStatus);
 		System.out.println("in book update book is "+book.getStatus());
 		
-			if(config.getStompTopicName().equals("/topic/68935.book.*"))
+			if(config.getStompTopicName().equals("/topic/68935.book.*")){
 				callProducer("library-a:"+isbn);
-			else
+				listener();
+			}
+			else{
 				callProducer("library-b:"+isbn);
-					
+				listener();
+
+			}	
 		
 		return book;
 	}
-	public void callConsumer() throws JMSException	{
+	
+	    private static String env(String key, String defaultValue) {
+		String rc = System.getenv(key);
+		if( rc== null ) {
+		    return defaultValue;
+		}
+		return rc;
+	    }
+
+	public void callProducer(String name) throws JMSException {
+		System.out.println("in callProducer "+config.getApolloUser());
+		String user = env1("APOLLO_USER", config.getApolloUser());
+		String password = env1("APOLLO_PASSWORD", config.getApolloPassword());
+		String host = env1("APOLLO_HOST", config.getApolloHost());
+		int port = config.getApolloPort();
+		//String queue = "/queue/mytesting";
+		//String destination = arg(args, 0, queue);
+
+		StompJmsConnectionFactory factory = new StompJmsConnectionFactory();
+		factory.setBrokerURI("tcp://" + host + ":" + port);
+
+		Connection connection = factory.createConnection(user, password);
+		connection.start();
+		Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+		Destination dest = new StompJmsDestination(config.getStompQueueName());//destination);
+		MessageProducer producer = session.createProducer(dest);
+		//producer.setDeliveryMode(DeliveryMode.PERSISTENT);
+		//producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+
+		System.out.println("Sending messages to " + config.getStompQueueName() + "...");
+		//String data = "library-a";
+		TextMessage msg = session.createTextMessage(name);
+		//String msgqueue=name+",";
+		producer.send(msg);
+
+		//msg.setLongProperty("id", System.currentTimeMillis());
+		//producer.send(session.createTextMessage("SHUTDOWN"));
+		connection.close();
+
+	    }
+
+	    private static String env1(String key, String defaultValue) {
+		String rc = System.getenv(key);
+		if( rc== null ) {
+		    return defaultValue;
+		}
+		return rc;
+	    }
+	    
+	    public void listener() throws JMSException
+	    {
+	    	String user = env("APOLLO_USER", config.getApolloUser());
+			String password = env("APOLLO_PASSWORD", config.getApolloPassword());
+			String host = env("APOLLO_HOST", config.getApolloHost());
+			int port = config.getApolloPort();//Integer.parseInt(env("APOLLO_PORT", config.getApolloHost()));
+	    	String destination = config.getStompTopicName();
+
+	    	StompJmsConnectionFactory factory = new StompJmsConnectionFactory();
+	    	factory.setBrokerURI("tcp://" + host + ":" + port);
+
+	    	Connection connection = factory.createConnection(user, password);
+	    	connection.start();
+	    	Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+	    	Destination dest = new StompJmsDestination(destination);
+
+	    	MessageConsumer consumer = session.createConsumer(dest);
+	    	System.currentTimeMillis();
+	    	System.out.println("Waiting for messages.....");
+	    	while(true) {
+	    	    Message msg = consumer.receive();
+	    	    if( msg instanceof  TextMessage ) {
+	    		String body = ((TextMessage) msg).getText();
+	    		if( "SHUTDOWN".equals(body)) {
+	    		    break;
+	    		}
+	    		System.out.println("Received message = .." + body);
+
+	    	    } else if (msg instanceof StompJmsMessage) {
+	    		StompJmsMessage smsg = ((StompJmsMessage) msg);
+	    		String body = smsg.getFrame().contentAsString();
+	    		if ("SHUTDOWN".equals(body)) {
+	    		    break;
+	    		}
+	    		System.out.println("Received message = .." + body);
+
+	    	    } else {
+	    		System.out.println("Unexpected message type: "+msg.getClass());
+	    	    }
+	    	}
+	    	connection.close();
+	        }
+}
+/*
+ * public void callConsumer() throws JMSException	{
 		String user = env("APOLLO_USER", config.getApolloUser());
 		String password = env("APOLLO_PASSWORD", config.getApolloPassword());
 		String host = env("APOLLO_HOST", config.getApolloHost());
-		int port = Integer.parseInt(env("APOLLO_PORT",config.getApolloPort()));
+		int port = Integer.parseInt(env("APOLLO_PORT", config.getApolloHost()));
 		//String queue = "/queue/mytesting";
 		//String destination = arg(args, 0, queue);
 		StompJmsConnectionFactory factory = new StompJmsConnectionFactory();
@@ -148,63 +256,19 @@ public class BookRepository implements BookRepositoryInterface {
 			if( "SHUTDOWN".equals(body)) {
 			    break;
 			}
-		    } else if (msg instanceof StompJmsMessage) {
-			StompJmsMessage smsg = ((StompJmsMessage) msg);
-			String body = smsg.getFrame().contentAsString();
-			if ("SHUTDOWN".equals(body)) {
-			    break;
-			}
-			System.out.println("Received message = " + body);
-		    } else {
-			System.out.println("Unexpected message type: "+msg.getClass());
+		    } 
+		    else if (msg instanceof StompJmsMessage) {
+		    	StompJmsMessage smsg = ((StompJmsMessage) msg);
+		    	String body = smsg.getFrame().contentAsString();
+		    	if ("SHUTDOWN".equals(body)) {
+		    		break;
+		    	}
+		    	System.out.println("Received message = " + body);
+		    	} 
+		    	else {
+		    		System.out.println("Unexpected message type: "+msg.getClass());
 		    }
 		}
 		connection.close();	    
 	}
-	    private static String env(String key, String defaultValue) {
-		String rc = System.getenv(key);
-		if( rc== null ) {
-		    return defaultValue;
-		}
-		return rc;
-	    }
-
-	public void callProducer(String name) throws JMSException {
-		System.out.println("in callProducer "+config.getApolloUser());
-		String user = env1("APOLLO_USER", config.getApolloUser());
-		String password = env1("APOLLO_PASSWORD", config.getApolloPassword());
-		String host = env1("APOLLO_HOST", config.getApolloHost());
-		int port = Integer.parseInt(env1("APOLLO_PORT",config.getApolloPort() ));
-		//String queue = "/queue/mytesting";
-		//String destination = arg(args, 0, queue);
-
-		StompJmsConnectionFactory factory = new StompJmsConnectionFactory();
-		factory.setBrokerURI("tcp://" + host + ":" + port);
-
-		Connection connection = factory.createConnection(user, password);
-		connection.start();
-		Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-		Destination dest = new StompJmsDestination(config.getStompQueueName());//destination);
-		MessageProducer producer = session.createProducer(dest);
-		//producer.setDeliveryMode(DeliveryMode.PERSISTENT);
-		//producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
-
-		System.out.println("Sending messages to " + config.getStompQueueName() + "...");
-		//String data = "library-a";
-		TextMessage msg = session.createTextMessage(name);
-		producer.send(msg);
-
-		msg.setLongProperty("id", System.currentTimeMillis());
-		producer.send(session.createTextMessage("SHUTDOWN"));
-		connection.close();
-
-	    }
-
-	    private static String env1(String key, String defaultValue) {
-		String rc = System.getenv(key);
-		if( rc== null ) {
-		    return defaultValue;
-		}
-		return rc;
-	    }
-}
+ */

@@ -41,7 +41,7 @@ public class LibraryService extends Service<LibraryServiceConfiguration> {
 	String apollouser=configuration.getApolloUser();
 	String apolloPassword=configuration.getApolloPassword();
 	String apollohost=configuration.getApolloHost();
-	String apolloPort=configuration.getApolloPort();
+	int apolloPort=configuration.getApolloPort();
 	log.debug("Queue name is {}. Topic name is {}. User is {}, password is {}. host is {}. port is {}", queueName,topicName,apollouser,apolloPassword,apollohost,apolloPort);
 	// TODO: Apollo STOMP Broker URL and login
 	// Do from the library_a_config.yml file

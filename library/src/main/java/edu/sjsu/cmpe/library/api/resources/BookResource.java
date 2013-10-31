@@ -112,15 +112,15 @@ public class BookResource {
 		BookDto bookResponse=new BookDto(book);
 		String location = "/books/" + book.getIsbn();
 		bookResponse.addLink(new LinkDto("view-book", location, "GET"));
-		Status temp = bookRepository.getBookByISBN(isbn.get()).getStatus();
-		System.out.println("status is "+temp.toString());
-		if (temp.toString()=="lost") {
-			System.out.println("In temp.toString()==lost");
+		//Status temp = bookRepository.getBookByISBN(isbn.get()).getStatus();
+		//System.out.println("status is "+temp.toString());
+		//if (temp.toString()=="lost") {
+			//System.out.println("In temp.toString()==lost");
 			// Sent msg to procurementservice to order new book.
 		
 			//bookrepoactions.callProducer();
 			//bookrepoactions.callConsumer();			
-		}
+		//}
 		return Response.status(200).entity(bookResponse).build();
 	}
 
