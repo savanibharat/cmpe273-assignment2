@@ -6,6 +6,7 @@ import javax.jms.JMSException;
 import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
+import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -87,7 +88,8 @@ public class BookResource {
 	@PUT
 	@Path("/{isbn}")
 	@Timed(name = "update-book-status")
-	public Response updateBookStatus(@PathParam("isbn") LongParam isbn, @QueryParam("status") Status status) throws JMSException {
+	public Response updateBookStatus(@PathParam("isbn") LongParam isbn,
+            @DefaultValue("available") @QueryParam("status") Status status) throws JMSException {
 
 		/*Book book = bookRepository.getBookByISBN(isbn.get());
 		book.setStatus(status);
@@ -108,10 +110,15 @@ public class BookResource {
 		}*/
 
 		// ---------------------------------------------------------------
+		System.out.println("1");
 		Book book=bookRepository.update(isbn.get(),status);
+		System.out.println("2");
 		BookDto bookResponse=new BookDto(book);
+		System.out.println("3");
 		String location = "/books/" + book.getIsbn();
+		System.out.println("4");
 		bookResponse.addLink(new LinkDto("view-book", location, "GET"));
+		System.out.println("5");
 		//Status temp = bookRepository.getBookByISBN(isbn.get()).getStatus();
 		//System.out.println("status is "+temp.toString());
 		//if (temp.toString()=="lost") {

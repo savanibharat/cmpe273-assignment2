@@ -3,7 +3,7 @@
             <title>Home</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <!-- Latest compiled and minified CSS -->
-            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">
+           <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen"> 
             <!-- Optional theme -->
             <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
         </head>
@@ -14,12 +14,13 @@
                     <table class="table table-hover">
                     {{#books}}
                         <tr>
-                            <td>{{isbn}}</td>
-							<td><img class="img-thumbnail" height="92" width="72" src="{{coverimage}}"></td>
-							<td>{{title}}</td>
-							<td>{{category}}</td>
-							<td>{{status}}</td>
-							<td><button id="{{isbn}}" type="button" class="btn btn-primary">Report Lost</button></td>
+                           
+						<td>{{isbn}}</td>
+						<td><img class="img-thumbnail" height="92" width="72" src="{{coverimage}}"></td>
+						<td>{{title}}</td>
+						<td>{{category}}</td>
+						<td>{{status}}</td>
+						<td><button id="{{isbn}}" type="button" class="btn btn-primary">Report Lost</button></td>
                         </tr>
                     {{/books}}
                     </table>
@@ -30,6 +31,8 @@
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="//code.jquery.com/jquery.js"></script>
             <!-- Latest compiled and minified JavaScript -->
+            <script src="../assets/js/app.js"></script>
+            
             <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         </body>
 </html>
