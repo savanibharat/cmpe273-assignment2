@@ -1,0 +1,1437 @@
+DEBUG [2013-11-05 08:20:34,276] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 08:20:34,462] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 08:20:34,690] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 08:20:34,699] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 08:20:35,059] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 08:20:35,267] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 08:20:35,267] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 08:20:36,553] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 08:20:36,563] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 08:20:36,569] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 08:22:30,003] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 08:22:30,087] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 08:22:30,285] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 08:22:30,290] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 08:22:30,562] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 08:22:30,854] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 08:22:30,855] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 08:22:31,933] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 08:22:31,949] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 08:22:31,953] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 09:02:42,166] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:02:42,228] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:02:42,399] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:02:42,403] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:02:42,757] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:02:43,006] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:02:43,006] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:02:43,806] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:02:43,844] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 09:02:43,847] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+WARN  [2013-11-05 09:02:49,249] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+WARN  [2013-11-05 09:02:51,992] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+WARN  [2013-11-05 09:02:52,937] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+WARN  [2013-11-05 09:02:53,512] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+WARN  [2013-11-05 09:02:54,033] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+WARN  [2013-11-05 09:02:54,430] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+WARN  [2013-11-05 09:02:54,834] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+WARN  [2013-11-05 09:02:55,101] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+WARN  [2013-11-05 09:02:56,008] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+DEBUG [2013-11-05 09:04:14,614] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:04:14,701] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:04:14,927] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:04:14,932] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:04:15,258] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:04:15,474] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:04:15,474] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:04:16,307] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:04:16,320] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 09:04:16,325] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+WARN  [2013-11-05 09:04:19,342] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+WARN  [2013-11-05 09:04:20,873] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+WARN  [2013-11-05 09:04:21,768] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+DEBUG [2013-11-05 09:05:42,324] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:05:42,412] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:05:42,639] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:05:42,644] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:05:42,922] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:05:43,109] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:05:43,110] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:05:44,083] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:05:44,093] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 09:05:44,097] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+WARN  [2013-11-05 09:05:48,683] org.eclipse.jetty.servlet.ServletHandler: /library/
+! com.google.common.util.concurrent.UncheckedExecutionException: com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4880) ~[guava-14.0.1.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.compile(CachingMustacheFactory.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.MustacheViewRenderer.render(MustacheViewRenderer.java:40) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:74) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:22) ~[dropwizard-views-0.6.2.jar:na]
+! at com.sun.jersey.spi.container.ContainerResponse.write(ContainerResponse.java:306) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1479) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1391) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1381) ~[jersey-server-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:538) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:716) ~[jersey-servlet-1.17.1.jar:1.17.1]
+! at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+! at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:29) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419) ~[jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384) [jetty-servlet-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.metrics.jetty.InstrumentedHandler.handle(InstrumentedHandler.java:200) ~[metrics-jetty-2.2.0.jar:na]
+! at org.eclipse.jetty.server.handler.GzipHandler.handle(GzipHandler.java:264) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at com.yammer.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:123) ~[dropwizard-core-0.6.2.jar:na]
+! at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.Server.handle(Server.java:368) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) ~[jetty-http-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.server.nio.BlockingChannelConnector$BlockingChannelEndPoint.run(BlockingChannelConnector.java:298) ~[jetty-server-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) ~[jetty-util-8.1.10.v20130312.jar:8.1.10.v20130312]
+! at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+Caused by: ! com.google.common.util.concurrent.UncheckedExecutionException: com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2263) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.get(LocalCache.java:4000) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4004) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4874) ~[guava-14.0.1.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory.compile(DefaultMustacheFactory.java:180) ~[compiler-0.8.10.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.originalCompile(CachingMustacheFactory.java:44) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.access$000(CachingMustacheFactory.java:15) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:24) ~[dropwizard-views-0.6.2.jar:na]
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory$1.load(CachingMustacheFactory.java:21) ~[dropwizard-views-0.6.2.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 43 common frames omitted
+Caused by: ! com.github.mustachejava.MustacheException: Template /edu/sjsu/cmpe/library/ui/views/home.mustache not found
+! at com.yammer.dropwizard.views.mustache.CachingMustacheFactory.getReader(CachingMustacheFactory.java:33) ~[dropwizard-views-0.6.2.jar:na]
+! at com.github.mustachejava.MustacheParser.compile(MustacheParser.java:27) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:218) ~[compiler-0.8.10.jar:na]
+! at com.github.mustachejava.DefaultMustacheFactory$MustacheCacheLoader.load(DefaultMustacheFactory.java:215) ~[compiler-0.8.10.jar:na]
+! at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3599) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2379) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2342) ~[guava-14.0.1.jar:na]
+! at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2257) ~[guava-14.0.1.jar:na]
+!... 55 common frames omitted
+DEBUG [2013-11-05 09:12:48,257] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:12:48,382] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:12:48,787] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:12:48,795] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:12:49,211] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:12:49,643] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:12:49,643] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:12:50,879] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:12:50,981] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 09:12:50,993] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 09:15:17,486] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:15:17,625] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:15:17,854] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:15:17,865] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:15:18,239] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:15:18,418] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:15:18,418] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:15:19,279] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:15:19,293] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 09:15:19,303] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 09:22:25,008] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:22:25,091] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:22:25,307] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:22:25,312] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:22:25,595] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:22:25,953] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:22:25,954] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:22:26,744] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:22:26,755] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 09:22:26,759] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 09:24:22,539] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:24:22,621] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:24:22,876] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:24:22,883] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:24:23,227] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:24:23,421] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:24:23,421] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:24:24,350] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:24:24,361] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 09:24:24,366] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 09:33:57,627] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:33:57,838] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:33:58,283] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:33:58,292] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:33:58,897] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:33:59,173] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:33:59,173] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:34:00,925] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:34:00,941] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 09:34:00,980] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 09:38:26,903] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:38:26,988] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:38:27,222] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:38:27,228] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:38:27,508] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:38:27,774] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:38:27,774] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:38:28,660] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:38:28,670] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 09:38:28,675] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 09:42:03,872] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:42:03,965] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:42:04,167] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:42:04,172] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:42:04,473] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:42:04,696] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:42:04,696] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:42:05,623] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:42:05,634] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+WARN  [2013-11-05 09:42:05,638] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:9001
+INFO  [2013-11-05 09:42:05,638] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 09:51:54,119] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:51:54,282] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:51:54,494] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:51:54,500] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:51:54,857] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:51:55,084] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:51:55,084] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:51:56,100] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:51:56,114] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 09:51:56,120] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 09:53:43,610] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 09:53:43,767] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 09:53:43,967] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 09:53:43,972] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 09:53:44,277] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 09:53:44,486] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 09:53:44,487] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 09:53:45,380] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 09:53:45,391] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 09:53:45,395] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 10:02:32,329] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 10:02:32,416] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 10:02:32,659] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 10:02:32,666] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 10:02:33,041] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 10:02:33,286] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 10:02:33,287] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 10:02:34,284] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 10:02:34,297] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+WARN  [2013-11-05 10:02:34,302] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:9001
+INFO  [2013-11-05 10:02:34,303] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
+DEBUG [2013-11-05 10:05:15,250] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.all. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-05 10:05:15,339] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-05 10:05:15,600] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-05 10:05:15,606] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-05 10:05:15,904] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-05 10:05:16,141] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-05 10:05:16,141] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-05 10:05:17,048] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-05 10:05:17,059] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8001
+INFO  [2013-11-05 10:05:17,064] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9001
