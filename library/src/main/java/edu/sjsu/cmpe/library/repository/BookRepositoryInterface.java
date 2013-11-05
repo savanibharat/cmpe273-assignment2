@@ -48,4 +48,6 @@ public interface BookRepositoryInterface {
      */
     void delete(Long isbn);
     Book update(Long isbn,Status status) throws JMSException;
+    void add(Book newbook);
+    
 }

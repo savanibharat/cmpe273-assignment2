@@ -2,6 +2,7 @@ package edu.sjsu.cmpe.procurement;
 
 import java.util.ArrayList;
 
+
 import javax.jms.Connection;
 import javax.jms.Destination;
 import javax.jms.JMSException;
@@ -26,7 +27,8 @@ import de.spinscale.dropwizard.jobs.Job;
 import de.spinscale.dropwizard.jobs.annotations.Every;
 
 
-@Every("5mn")
+
+@Every("5s")
 public class StartUpJobs extends Job{
 	@Override
 	public void doJob() {
@@ -36,11 +38,14 @@ public class StartUpJobs extends Job{
 		//3 get
 		//4 publisher
 		System.out.println("came into dojob()");
+		
 		StartUpJobs a=new StartUpJobs();
 		try{
+			System.out.println("making job for consumer");
 			String str = a.consumer();
 			if(str!=null)
 			{
+				
 				a.doposting(str);
 			}
 			ArrayList<String>books=a.getBooksFromPulisher();
@@ -58,7 +63,7 @@ public class StartUpJobs extends Job{
 		String host = "54.215.210.214";
 		int port = Integer.parseInt("61613");
 		//String destination = arg(args, 0, queue);
-
+		System.out.println("executing consumer");
 		StompJmsConnectionFactory factory = new StompJmsConnectionFactory();
 		factory.setBrokerURI("tcp://" + host + ":" + port);
 
@@ -122,7 +127,7 @@ public class StartUpJobs extends Job{
 	void doposting(String str)
 	{
 		try {
-
+			System.out.println("inside post method");
 			Client client = Client.create();
 			WebResource webResource = client
 					.resource("http://54.215.210.214:9000/orders");
@@ -185,7 +190,7 @@ public class StartUpJobs extends Job{
     		String password = "password";
     		String host = "54.215.210.214";
     		int port = Integer.parseInt("61613");
-    		String destination_a = "/topic/68935.book.*";
+    		String destination_a = "/topic/68935.book.all";
     		String destination_b="/topic/68935.book.computer";
 
     		StompJmsConnectionFactory factory = new StompJmsConnectionFactory();
@@ -209,7 +214,7 @@ public class StartUpJobs extends Job{
         		msg.setLongProperty("id", System.currentTimeMillis());
     			producer_a.send(msg);
 				System.out.println("Sent msg for producer_a"+msg);
-    			if(data.split(":")[2].equals("computer"))
+    			if(data.split(":")[2].equals("\"computer\""))
     			{
     				producer_b.send(msg);
     				System.out.println("Sent msg for producer_b"+msg);

@@ -13,6 +13,8 @@ import com.yammer.dropwizard.config.Environment;
 
 import edu.sjsu.cmpe.procurement.api.resources.ProcurementServiceResource;
 import edu.sjsu.cmpe.procurement.config.ProcurementServiceConfiguration;
+import com.yammer.dropwizard.client.JerseyClientBuilder;
+
 
 public class ProcurementService extends Service<ProcurementServiceConfiguration> {
 
@@ -32,6 +34,7 @@ public class ProcurementService extends Service<ProcurementServiceConfiguration>
     @Override
     public void run(ProcurementServiceConfiguration configuration,
 	    Environment environment) throws Exception {
+    	
 	String queueName = configuration.getStompQueueName();
 	String topicName = configuration.getStompTopicName();
 	String apollouser=configuration.getApolloUser();

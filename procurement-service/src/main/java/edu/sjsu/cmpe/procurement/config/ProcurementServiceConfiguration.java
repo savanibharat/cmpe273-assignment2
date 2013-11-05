@@ -12,15 +12,13 @@ import com.yammer.dropwizard.config.Configuration;
 
 public class ProcurementServiceConfiguration extends Configuration {
 	 	
-		@Valid
-		@NotNull
-		@JsonProperty
-		private JerseyClientConfiguration httpClient=new JerseyClientConfiguration();
-		
-	
-		public JerseyClientConfiguration getJerseyClientConfiguration() {
+	 @Valid
+	    @NotNull
+	    @JsonProperty
+	    private JerseyClientConfiguration httpClient = new JerseyClientConfiguration();
+	 public JerseyClientConfiguration getJerseyClientConfiguration() {
 	        return httpClient;
-		}
+	    }
 		
 		@NotEmpty
 	    @JsonProperty

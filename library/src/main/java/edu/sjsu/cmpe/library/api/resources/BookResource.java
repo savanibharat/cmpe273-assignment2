@@ -2,6 +2,7 @@ package edu.sjsu.cmpe.library.api.resources;
 
 import javax.jms.JMSException;
 
+
 import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -23,7 +24,6 @@ import edu.sjsu.cmpe.library.domain.Book.Status;
 import edu.sjsu.cmpe.library.dto.BookDto;
 import edu.sjsu.cmpe.library.dto.BooksDto;
 import edu.sjsu.cmpe.library.dto.LinkDto;
-import edu.sjsu.cmpe.library.repository.BookRepository;
 import edu.sjsu.cmpe.library.repository.BookRepositoryInterface;
 
 @Path("/v1/books")
@@ -32,16 +32,16 @@ import edu.sjsu.cmpe.library.repository.BookRepositoryInterface;
 public class BookResource {
 	/** bookRepository instance */
 	private final BookRepositoryInterface bookRepository;
-	private BookRepository bookrepoactions;
+	//private BookRepository bookrepoactions;
 	/**
 	 * BookResource constructor
 	 * 
 	 * @param bookRepository
 	 *            a BookRepository instance
 	 */
-	public BookResource(BookRepositoryInterface bookRepository,BookRepository bookrepoactions) {
+	public BookResource(BookRepositoryInterface bookRepository) {
 		this.bookRepository = bookRepository;
-		this.bookrepoactions=bookrepoactions;
+		//this.bookrepoactions=bookrepoactions;
 	}
 
 	@GET

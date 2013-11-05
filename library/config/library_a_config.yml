@@ -8,7 +8,7 @@ stompQueueName: /queue/68935.book.orders
 
 # Library A subscribes to all book categories
 # FIXME - Replace 99999 with your ID
-stompTopicName: /topic/68935.book.*
+stompTopicName: /topic/68935.book.all
 
 # TODO: Apollo STOMP Broker URL and login
 apolloUser: "admin"
