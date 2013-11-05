@@ -28,7 +28,7 @@ import de.spinscale.dropwizard.jobs.annotations.Every;
 
 
 
-@Every("5s")
+@Every("300s")
 public class StartUpJobs extends Job{
 	@Override
 	public void doJob() {
