@@ -9,3 +9,5 @@ https://github.com/savanibharat/cmpe273-assignment2
 54.215.193.63:8001/library/v1
 
 54.215.193.63:8002/library/v1
+
+heap memory location

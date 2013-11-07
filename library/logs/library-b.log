@@ -75,3 +75,359 @@ WARN  [2013-11-07 02:34:01,940] com.sun.jersey.spi.inject.Errors: The following 
   WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
 INFO  [2013-11-07 02:34:01,993] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
 INFO  [2013-11-07 02:34:02,002] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
+DEBUG [2013-11-07 06:45:40,964] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.computer. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 06:45:41,055] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-07 06:45:41,341] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-07 06:45:41,348] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 06:45:41,723] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-07 06:45:41,918] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-07 06:45:41,918] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-07 06:45:42,893] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-07 06:45:42,912] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
+INFO  [2013-11-07 06:45:42,918] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
+DEBUG [2013-11-07 06:47:53,576] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.computer. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 06:47:53,763] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-07 06:47:54,173] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-07 06:47:54,181] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 06:47:54,628] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-07 06:47:54,992] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-07 06:47:54,993] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-07 06:47:56,173] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-07 06:47:56,182] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
+INFO  [2013-11-07 06:47:56,186] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
+DEBUG [2013-11-07 06:51:04,791] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.computer. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 06:51:04,993] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-07 06:51:05,276] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-07 06:51:05,283] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 06:51:05,763] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-07 06:51:06,184] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-07 06:51:06,184] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-07 06:51:07,449] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-07 06:51:07,473] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
+WARN  [2013-11-07 06:51:07,478] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:9002
+INFO  [2013-11-07 06:51:07,479] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
+DEBUG [2013-11-07 06:57:06,060] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.computer. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 06:57:06,270] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-07 06:57:06,541] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-07 06:57:06,547] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 06:57:06,915] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-07 06:57:07,230] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-07 06:57:07,231] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-07 06:57:08,381] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-07 06:57:08,392] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
+INFO  [2013-11-07 06:57:08,396] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
+DEBUG [2013-11-07 06:59:40,896] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.computer. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 06:59:40,994] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-07 06:59:41,351] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-07 06:59:41,359] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 06:59:41,799] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-07 06:59:42,068] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-07 06:59:42,069] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-07 06:59:43,212] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-07 06:59:43,224] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
+WARN  [2013-11-07 06:59:43,229] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:9002
+INFO  [2013-11-07 06:59:43,229] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
+DEBUG [2013-11-07 07:00:33,548] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.computer. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 07:00:33,689] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-07 07:00:33,949] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-07 07:00:33,955] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 07:00:34,338] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-07 07:00:34,618] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-07 07:00:34,619] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-07 07:00:35,851] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-07 07:00:35,895] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
+WARN  [2013-11-07 07:00:35,902] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:9002
+INFO  [2013-11-07 07:00:35,903] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
+DEBUG [2013-11-07 07:01:14,318] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.computer. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 07:01:14,476] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-07 07:01:14,942] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-07 07:01:14,949] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 07:01:15,356] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-07 07:01:15,652] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-07 07:01:15,653] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-07 07:01:16,801] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-07 07:01:16,818] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
+WARN  [2013-11-07 07:01:16,825] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:9002
+INFO  [2013-11-07 07:01:16,825] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
+DEBUG [2013-11-07 07:02:38,877] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.computer. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 07:02:39,056] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-07 07:02:39,574] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-07 07:02:39,581] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 07:02:40,027] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-07 07:02:40,389] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-07 07:02:40,390] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-07 07:02:41,631] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-07 07:02:41,641] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
+INFO  [2013-11-07 07:02:41,645] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
+DEBUG [2013-11-07 07:05:41,096] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.computer. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 07:05:41,180] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-07 07:05:41,476] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-07 07:05:41,483] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 07:05:41,920] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-07 07:05:42,142] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-07 07:05:42,142] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-07 07:05:43,457] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-07 07:05:43,470] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
+INFO  [2013-11-07 07:05:43,475] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
+DEBUG [2013-11-07 07:08:30,629] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.computer. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 07:08:30,717] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-07 07:08:30,961] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-07 07:08:30,968] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 07:08:31,423] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-07 07:08:31,688] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-07 07:08:31,689] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-07 07:08:32,847] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-07 07:08:32,868] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
+INFO  [2013-11-07 07:08:32,874] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
+DEBUG [2013-11-07 07:13:06,559] edu.sjsu.cmpe.library.LibraryService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.computer. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 07:13:06,687] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2013-11-07 07:13:07,080] com.yammer.dropwizard.cli.ServerCommand: Starting library-service
+INFO  [2013-11-07 07:13:07,087] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 07:13:07,439] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2013-11-07 07:13:07,767] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    DELETE  /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/ (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    POST    /library/v1/books (edu.sjsu.cmpe.library.api.resources.BookResource)
+    PUT     /library/v1/books/{isbn} (edu.sjsu.cmpe.library.api.resources.BookResource)
+    GET     /library/ (edu.sjsu.cmpe.library.ui.resources.HomeResource)
+    GET     /library/v1/ (edu.sjsu.cmpe.library.api.resources.RootResource)
+
+INFO  [2013-11-07 07:13:07,767] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+WARN  [2013-11-07 07:13:08,965] com.sun.jersey.spi.inject.Errors: The following warnings have been detected with resource and/or provider classes:
+  WARNING: A sub-resource method, public edu.sjsu.cmpe.library.dto.BooksDto edu.sjsu.cmpe.library.api.resources.BookResource.getAllBooks(), with URI template, "/", is treated as a resource method
+INFO  [2013-11-07 07:13:08,978] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8002
+INFO  [2013-11-07 07:13:08,983] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9002
