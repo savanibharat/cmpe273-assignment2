@@ -7,7 +7,7 @@ $(document).ready(function() {
         var port = location.port;
 
         if (port==8001)
-                {var stompTopicName = /topic/68935.book.all";}
+                {var stompTopicName = "/topic/68935.book.all";}
         else 
                 {var stompTopicName = "/topic/68935.book.computer";}        
               

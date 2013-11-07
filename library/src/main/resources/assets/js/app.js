@@ -3,7 +3,7 @@ function notifyProcurement(lostBookIsbn) {
     
     $.ajax({
         url: '/library/v1/books/' + isbn + '/?status=lost',
-       dataType: "json",
+       rawBody: "json",
         type: 'PUT',
         success: function(data) {
                         alert('The book with isbn :: ' + isbn+ ' is lost.');
