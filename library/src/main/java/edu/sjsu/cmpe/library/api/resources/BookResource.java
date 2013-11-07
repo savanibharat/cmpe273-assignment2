@@ -91,23 +91,7 @@ public class BookResource {
 	public Response updateBookStatus(@PathParam("isbn") LongParam isbn,
             @DefaultValue("available") @QueryParam("status") Status status) throws JMSException {
 
-		/*Book book = bookRepository.getBookByISBN(isbn.get());
-		book.setStatus(status);
-		System.out.println(status);
-		System.out.println("in put book is "+book.getStatus());
-		BookDto bookResponse = new BookDto(book);
-		String location = "/books/" + book.getIsbn();
-		bookResponse.addLink(new LinkDto("view-book", location, "GET"));
-		// edit hashmap
-		Status temp = bookRepository.getBookByISBN(isbn.get()).getStatus();
-		System.out.println("status is "+temp.toString());
-		if (temp.toString()=="lost") {
-			System.out.println("In temp.toString()==lost");
-			// Sent msg to procurementservice to order new book.
 		
-			bookrepoactions.callProducer();
-			bookrepoactions.callConsumer();
-		}*/
 
 		// ---------------------------------------------------------------
 		System.out.println("1");

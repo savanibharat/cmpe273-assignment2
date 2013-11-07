@@ -75,11 +75,9 @@ public class LibraryService extends Service<LibraryServiceConfiguration> {
 				try {
 					asyncReceiver.listernerMsg();
 				} catch (MalformedURLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			} catch (JMSException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	    }

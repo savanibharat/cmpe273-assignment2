@@ -1,6 +1,6 @@
-INFO  [2013-11-05 09:34:02,001] org.reflections.Reflections: Reflections took 399 ms to scan 1 urls, producing 7 keys and 7 values 
-DEBUG [2013-11-05 09:34:02,014] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.*. User is admin, password is password. host is 54.215.210.214. port is 61613
-WARN  [2013-11-05 09:34:02,176] com.yammer.dropwizard.config.ServerFactory: 
+INFO  [2013-11-07 02:26:41,937] org.reflections.Reflections: Reflections took 305 ms to scan 1 urls, producing 7 keys and 7 values 
+DEBUG [2013-11-07 02:26:41,946] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.*. User is admin, password is password. host is 54.215.210.214. port is 61613
+WARN  [2013-11-07 02:26:42,003] com.yammer.dropwizard.config.ServerFactory: 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -10,24 +10,24 @@ WARN  [2013-11-05 09:34:02,176] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-INFO  [2013-11-05 09:34:02,509] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
-INFO  [2013-11-05 09:34:02,514] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2013-11-05 09:34:02,795] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.8 06/24/2011 12:17 PM'
-INFO  [2013-11-05 09:34:02,988] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+INFO  [2013-11-07 02:26:42,211] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2013-11-07 02:26:42,217] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2013-11-07 02:26:42,603] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.8 06/24/2011 12:17 PM'
+INFO  [2013-11-07 02:26:42,792] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
 
     GET     /library/v1/ (edu.sjsu.cmpe.procurement.api.resources.RootResource)
     POST    /library/v1/ (edu.sjsu.cmpe.procurement.api.resources.RootResource)
 
-INFO  [2013-11-05 09:34:02,988] com.yammer.dropwizard.config.Environment: tasks = 
+INFO  [2013-11-07 02:26:42,793] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
 
-INFO  [2013-11-05 09:34:04,761] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
-INFO  [2013-11-05 09:34:04,773] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
-INFO  [2013-11-05 09:34:04,860] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-INFO  [2013-11-05 09:34:04,863] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.0 created.
-INFO  [2013-11-05 09:34:04,867] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
-INFO  [2013-11-05 09:34:04,870] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+INFO  [2013-11-07 02:26:43,845] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2013-11-07 02:26:43,856] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2013-11-07 02:26:43,939] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2013-11-07 02:26:43,942] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.0 created.
+INFO  [2013-11-07 02:26:43,946] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2013-11-07 02:26:43,948] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -35,147 +35,11 @@ INFO  [2013-11-05 09:34:04,870] org.quartz.core.QuartzScheduler: Scheduler meta-
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-INFO  [2013-11-05 09:34:04,870] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-INFO  [2013-11-05 09:34:04,870] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.0
-INFO  [2013-11-05 09:34:04,870] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-INFO  [2013-11-05 09:34:04,939] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
-INFO  [2013-11-05 09:34:04,941] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.StartUpJobs]
-INFO  [2013-11-05 09:34:05,146] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
-INFO  [2013-11-05 09:34:05,178] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
-INFO  [2013-11-05 09:34:05,240] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
-INFO  [2013-11-05 10:06:26,222] org.reflections.Reflections: Reflections took 254 ms to scan 1 urls, producing 7 keys and 7 values 
-DEBUG [2013-11-05 10:06:26,230] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.*. User is admin, password is password. host is 54.215.210.214. port is 61613
-WARN  [2013-11-05 10:06:26,275] com.yammer.dropwizard.config.ServerFactory: 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
-!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
-!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
-!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
-!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-INFO  [2013-11-05 10:06:26,473] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
-INFO  [2013-11-05 10:06:26,477] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2013-11-05 10:06:26,796] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.8 06/24/2011 12:17 PM'
-INFO  [2013-11-05 10:06:26,980] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
-
-    GET     /library/v1/ (edu.sjsu.cmpe.procurement.api.resources.RootResource)
-    POST    /library/v1/ (edu.sjsu.cmpe.procurement.api.resources.RootResource)
-
-INFO  [2013-11-05 10:06:26,980] com.yammer.dropwizard.config.Environment: tasks = 
-
-    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
-
-INFO  [2013-11-05 10:06:28,040] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
-INFO  [2013-11-05 10:06:28,051] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
-INFO  [2013-11-05 10:06:28,099] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-INFO  [2013-11-05 10:06:28,102] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.0 created.
-INFO  [2013-11-05 10:06:28,105] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
-INFO  [2013-11-05 10:06:28,108] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-INFO  [2013-11-05 10:06:28,108] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-INFO  [2013-11-05 10:06:28,108] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.0
-INFO  [2013-11-05 10:06:28,109] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-INFO  [2013-11-05 10:06:28,118] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
-INFO  [2013-11-05 10:06:28,120] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.StartUpJobs]
-INFO  [2013-11-05 10:06:28,189] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
-INFO  [2013-11-05 10:06:28,222] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
-INFO  [2013-11-05 10:06:28,231] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
-INFO  [2013-11-05 10:39:51,125] org.reflections.Reflections: Reflections took 255 ms to scan 1 urls, producing 7 keys and 7 values 
-DEBUG [2013-11-05 10:39:51,132] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.*. User is admin, password is password. host is 54.215.210.214. port is 61613
-WARN  [2013-11-05 10:39:51,176] com.yammer.dropwizard.config.ServerFactory: 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
-!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
-!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
-!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
-!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-INFO  [2013-11-05 10:39:51,363] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
-INFO  [2013-11-05 10:39:51,368] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2013-11-05 10:39:51,735] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.8 06/24/2011 12:17 PM'
-INFO  [2013-11-05 10:39:51,906] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
-
-    GET     /library/v1/ (edu.sjsu.cmpe.procurement.api.resources.RootResource)
-    POST    /library/v1/ (edu.sjsu.cmpe.procurement.api.resources.RootResource)
-
-INFO  [2013-11-05 10:39:51,906] com.yammer.dropwizard.config.Environment: tasks = 
-
-    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
-
-INFO  [2013-11-05 10:39:52,882] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
-INFO  [2013-11-05 10:39:52,895] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
-INFO  [2013-11-05 10:39:52,931] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-INFO  [2013-11-05 10:39:52,934] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.0 created.
-INFO  [2013-11-05 10:39:52,936] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
-INFO  [2013-11-05 10:39:52,938] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-INFO  [2013-11-05 10:39:52,939] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-INFO  [2013-11-05 10:39:52,939] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.0
-INFO  [2013-11-05 10:39:52,939] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-INFO  [2013-11-05 10:39:52,948] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
-INFO  [2013-11-05 10:39:52,950] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.StartUpJobs]
-INFO  [2013-11-05 10:39:53,028] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
-INFO  [2013-11-05 10:39:53,060] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
-WARN  [2013-11-05 10:39:53,066] org.eclipse.jetty.server.AbstractConnector: insufficient threads configured for SocketConnector@0.0.0.0:9000
-INFO  [2013-11-05 10:39:53,066] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
-INFO  [2013-11-05 10:50:59,909] org.reflections.Reflections: Reflections took 247 ms to scan 1 urls, producing 7 keys and 7 values 
-DEBUG [2013-11-05 10:50:59,918] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/68935.book.orders. Topic name is /topic/68935.book.*. User is admin, password is password. host is 54.215.210.214. port is 61613
-WARN  [2013-11-05 10:50:59,963] com.yammer.dropwizard.config.ServerFactory: 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
-!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
-!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
-!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
-!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-INFO  [2013-11-05 10:51:00,174] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
-INFO  [2013-11-05 10:51:00,178] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2013-11-05 10:51:00,520] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.8 06/24/2011 12:17 PM'
-INFO  [2013-11-05 10:51:00,756] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
-
-    GET     /library/v1/ (edu.sjsu.cmpe.procurement.api.resources.RootResource)
-    POST    /library/v1/ (edu.sjsu.cmpe.procurement.api.resources.RootResource)
-
-INFO  [2013-11-05 10:51:00,757] com.yammer.dropwizard.config.Environment: tasks = 
-
-    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
-
-INFO  [2013-11-05 10:51:01,786] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
-INFO  [2013-11-05 10:51:01,798] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
-INFO  [2013-11-05 10:51:01,858] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-INFO  [2013-11-05 10:51:01,861] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.0 created.
-INFO  [2013-11-05 10:51:01,865] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
-INFO  [2013-11-05 10:51:01,876] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-INFO  [2013-11-05 10:51:01,876] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-INFO  [2013-11-05 10:51:01,876] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.0
-INFO  [2013-11-05 10:51:01,877] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-INFO  [2013-11-05 10:51:01,890] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
-INFO  [2013-11-05 10:51:01,892] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.StartUpJobs]
-INFO  [2013-11-05 10:51:01,974] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
-INFO  [2013-11-05 10:51:02,002] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
-INFO  [2013-11-05 10:51:02,010] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+INFO  [2013-11-07 02:26:43,948] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2013-11-07 02:26:43,949] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.0
+INFO  [2013-11-07 02:26:43,949] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2013-11-07 02:26:43,963] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2013-11-07 02:26:43,966] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.StartUpJobs]
+INFO  [2013-11-07 02:26:44,035] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2013-11-07 02:26:44,057] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2013-11-07 02:26:44,075] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
